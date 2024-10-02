@@ -1,6 +1,8 @@
 // function to evaluate job eligibility
 function jobEligibility(age, yearExperience, knowsJavascript){
-    if (age > 25 && age < 50 && (yearExperience > 5 || (age < 30 && yearExperience >= 3)) && knowsJavascript){
+    let eligibleAge = age > 25 && age < 50;
+    let eligibleYearsofExperience = yearExperience > 5 || (age < 30 && yearExperience >= 3);
+    if(eligibleAge && eligibleYearsofExperience && knowsJavascript){
         return "Eligible for the job"
     }else{
         return "Not eligible"
